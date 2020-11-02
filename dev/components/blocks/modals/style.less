@@ -1,0 +1,28 @@
+.modal {
+    &__wrapper {
+        padding: 20px;
+        position: relative;
+    }
+    &__close {
+        position: absolute;
+        right: 0px;
+        top: -40px;
+        cursor: pointer;
+        transition: all 0.4s;
+        svg {
+            fill: @lightColor;
+            transition: all 0.4s;
+            width: 30px;
+            height: 30px;
+        }
+        &:hover {
+            
+            svg {
+                fill: @primary;
+                transform: rotate(180deg);
+                
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,72 @@
+include ../social/index.pug
+
+-
+    var footerNavigation = [{
+        name: 'Стоимость онлайн',
+        link: '#price'
+    },
+    {
+        name: 'О компании',
+        link: '#about'
+    },
+    {
+        name: 'Отзывы',
+        link: '#reviews'
+    },
+    {
+        name: 'Фото салона',
+        link: '#photos'
+    },
+    {
+        name: 'Специалисты',
+        link: '#team'
+    },
+     {
+        name: 'Контакты',
+        link: '#contacts'
+    },
+    ]
+    var social = [
+        {
+            svg: 'facebook',
+            link: ''
+        },
+        {
+            svg: 'vk',
+            link: 'https://vk.com/epilogia_ru'
+        },
+        {
+            svg: 'instagram',
+            link: 'https://www.instagram.com/epilogia.ru/'
+        }
+    ]
+
+footer.footer
+    .container
+        .footer__wrapper
+            .footer__logo
+                .logo
+                    +svg('logo')
+                .copyright
+                    span Epilogia 2020
+            .footer__navigation
+                nav.footer-navigation
+                    ul.footer-navigation__list
+                        each navItem in footerNavigation
+                            li.footer-navigation__item
+                                a(href=navItem.link).footer-navigation__link
+                                    span.footer-navigation__name=navItem.name
+            .footer__contacts
+                .footer__contacts-block
+                    span Эл. почта
+                    a(href="mailto:epilogia@inbox.ru" class="footer__contacts-link")
+                        span epilogia@inbox.ru
+                .footer__contacts-block
+                    span Соц сети:
+                    +social(social)
+            .footer__contacts
+                span Телефон:
+                a(href="tel:+78125079190" class="footer__contacts-link footer__contacts-link_large")
+                    span +7 (812) 507-91-90
+                a(href="javascript:void(0);" data-open="call").button.button_footer.modal-trigger заказать звонок
+

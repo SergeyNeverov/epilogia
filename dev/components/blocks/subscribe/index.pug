@@ -1,0 +1,19 @@
+.subscribe
+    .container
+        form.subscribe__form
+            .subscribe__header
+                h3.subscribe__title Будьте в курсе наших новостей!
+                p.subscribe__subtitle Подпишитесь на нашу рассылку и экономьте - узнавайте первым информацию о скидках и акциях!
+            .subscribe__body
+                label.field.field_action.subscribe__field
+                    +svg('mail')
+                    input(type="email" name="email" class="field__input" placeholder="Адрес электронной почты" data-req="true" data-field="")
+                label.field.field_send.subscribe__field-send
+                        a(href="javascript:void(0);" class="button button_light")
+                            span подписаться
+                            +svg('chevron-btn')
+                label.field.check.subscribe__check
+                        input(type="checkbox" name="agree" class="field__input check__input" data-req="true" data-field="")
+                        span.check__decore
+                            +svg('check')
+                        span.check__notice Нажимая на кнопку "записаться", я даю согласие на обработку персональных данных                

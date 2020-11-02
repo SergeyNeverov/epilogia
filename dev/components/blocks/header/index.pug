@@ -1,0 +1,26 @@
+include ../title/index.pug
+
+header.header
+    .header__wrapper
+        .logo
+            +svg('logo-dark')
+        .header__block
+            .header__contact
+                .header__contact-image
+                    +svg('time')
+                .header__contact-text
+                    span.header__contact-key Режим работы:
+                    strong.header__contact-value ПН-ПТ: с 10:00 до 22:00
+            .header__contact
+                .header__contact-image
+                    +svg('place')
+                .header__contact-text
+                    span.header__contact-key Адрес:
+                    strong.header__contact-value г. Санкт-Петербург, ул. Есенина 1к1, ст.м. Озерки
+        .header__block.header__block_phone
+            .header-phone
+                .header-phone__image
+                    +svg('phone')
+                .header-phone__links    
+                    a(href="tel:+78125079190").header-phone__link +7 (812) 507-91-90
+                    a(href="javascript:void(0);").header-phone__link-modal Заказать звонок

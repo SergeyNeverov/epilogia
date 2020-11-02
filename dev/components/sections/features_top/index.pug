@@ -1,0 +1,47 @@
+include ../../blocks/feature/index.pug
+
+-
+    var featurestList = {
+        items: [
+            {
+                src: 'face',
+                type: 'main',
+                title: 'Безболезненно',
+                text: `
+                    Полное отсутствие болевых ощущений
+                `
+            },
+            {
+                src: 'chrono',
+                type: 'main',
+                title: 'Быстро',
+                text: `
+                    Длительность процедуры от 1 до 20 минут
+                `
+            },
+            {
+                src: 'hairs',
+                type: 'main',
+                title: 'Нет повторному росту волос',
+                text: `
+                    Убираем причину появления новых волос
+                `
+            },
+            {
+                src: 'hands',
+                type: 'main',
+                title: 'Результат навсегда!',
+                text: `
+                    Гарантированный эффект после первой процедуры
+                `
+            }
+        ]
+    }
+
+
+section.features.features_top.section
+    .container
+        ul.features__list
+            each item in featurestList.items
+                li.features__item
+                    +feature(item)

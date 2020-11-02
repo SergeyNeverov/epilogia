@@ -1,0 +1,124 @@
+.action { 
+    margin-top: 140px;
+    &__form {
+        box-shadow: 0px 54px 100px rgba(0, 0, 0, 0.08);
+        padding: 57px 120px;
+        background: @lightColor;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 35px;
+        line-height: 138.2%;
+        text-align: center;
+        color: @secondary;
+        text-transform: uppercase;
+        font-family: "Montserrat-Bold";
+        strong {
+            color: @primary;
+        }
+    }
+    &__subtitle {
+        margin: 0;
+        font-size: 18px;
+        line-height: 153.7%;
+        color: @secondary;
+        font-family: "Montserrat-Semibold";
+        text-align: center;
+        strong {
+            color: @primary;
+            font-family: "Montserrat-Bold";
+        }
+    }
+
+    &__notice {
+        font-size: 20px;
+        line-height: 37px;
+        color: @secondary;
+        text-align: center;
+        vertical-align: middle;
+        margin: 0;
+        strong {
+            font-family: "Montserrat-Bold";
+            font-size: 30px;
+            line-height: 37px;
+            color: @primary;
+        }
+    }
+    &__form-wrapper {
+        .flex;
+        .wrapp;
+        margin: 33px 0 16px;
+    }
+    &__field {
+        width: calc(~"33% - 24px");
+        margin-right: 19px;
+        &-send {
+            width:  calc(~"33% + 19px");;
+            margin-right: 0;
+        }
+    }
+    &__check {
+        width: 100%;
+        justify-content: center;
+        .check__notice {
+            line-height: unset;
+        }
+    }
+}
+
+.timer {
+    &__list {
+        .flex;
+        justify-content: center;
+        .list-reset;
+    }
+    &__title {
+        font-size: 18px;
+        line-height: 138.2%;
+        color: @secondary;
+        font-family: "Montserrat-Semibold";
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__item {
+        position: relative;
+        margin-right: 60px;
+        &:before {
+            content: "";
+            position: absolute;
+            right: -27px;
+            top: 20px;
+            width: 6px;
+            height: 6px;
+            background: @primary;
+            border-radius: 50%;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            right: -27px;
+            bottom: 48px;
+            width: 6px;
+            height: 6px;
+            background: @primary;
+            border-radius: 50%;
+        }
+        &:last-child {
+            margin-right: 0;
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &__count {
+        font-family: "Prata";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 57px;
+        line-height: 130.7%;
+        display: block;
+        color: @primary;
+    }
+}

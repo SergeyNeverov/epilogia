@@ -1,0 +1,32 @@
+mixin feature(data)
+    case data.type
+        when 'about'
+            .feature.feature_about 
+                .feature__image.feature__image_about
+                    +svg(data.src)
+                .feature__text    
+                    .feature__title
+                        strong.feature__title-text=data.title
+                    .feature__description
+                        p.feature__description-text=data.text
+        when 'main'
+            .feature
+                .feature__image
+                    +svg(data.src)
+                .feature__title
+                    strong.feature__title-text=data.title
+                .feature__description
+                    p.feature__description-text=data.text
+        when 'how'
+            .feature.feature_how
+                .feature__image.feature__image_how
+                    +svg(data.src)
+                .feature__text.feature__text_how     
+                    .feature__title
+                        strong.feature__title-text=data.title
+                    .feature__description
+                        p.feature__description-text=data.text
+
+
+
+                        

@@ -1,0 +1,17 @@
+include ../form/index.pug
+-
+    var form = {
+        text: `Оставьте заявку и мы с Вами свяжимся в ближайшее время`,
+        button: 'Отправить'
+    }
+
+.modal(data-modal="call")
+    .modal__wrapper
+        .modal__close(data-izimodal-close="")
+            +svg('close')
+        +form(form)
+.modal(data-modal="video")
+    .modal__wrapper
+        .modal__close(data-izimodal-close="")
+            +svg('close')
+        h1 Video                 

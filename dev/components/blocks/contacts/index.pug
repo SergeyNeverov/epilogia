@@ -1,0 +1,26 @@
+.contacts(itemscope="" itemtype="http://schema.org/Organization")
+    .contacts__wrapper
+        .contacts__header
+            h3.contacts__title(itemprop="name") Epilogia. Лазерная эпиляция
+        .contacts__body
+            .contacts__block
+                span.contacts__block-name Телефон:
+                a(href="tel:+78125079190" class="contacts__link contacts__link_phone" itemprop="telephone") +7 (812) 507-91-90
+            .contacts__block
+                span.contacts__block-name Адрес:
+                .contacts__link.contacts__link_address(itemprop="address" itemscope="" itemtype="https://schema.org/PostalAddress") г. Санкт-Петербург, ул. Есенина 1к1, ст.м. Озерки
+            .contacts__block
+                span.contacts__block-name Эл. почта:
+                a(href="mailto:epilogia@inbox.ru" class="contacts__link" itemprop="email") epilogia@inbox.ru
+            .contacts__block
+                span.contacts__block-name График работы:
+                time.contacts__link.contacts__link_schedule ПН-ПТ: с 10:00 до 22:00
+        .contacts__footer
+            a(href="javascript:void(0);" class="button modal-trigger" data-open="call")
+                span написать нам
+                +svg('chevron-btn')    
+
+  
+
+    
+    

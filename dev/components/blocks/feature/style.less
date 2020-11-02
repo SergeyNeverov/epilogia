@@ -1,0 +1,58 @@
+.feature {
+    position: relative;
+    &_about {
+        .flex;
+        .feature__title {
+            .title-m;
+        }
+        .feature__description-text {
+            margin-top: 16px;
+        }
+    }
+    &_how {
+        .feature__description-text {
+            margin-top: 11px;
+            font-size: 16px;
+        }
+    }
+
+    &__image {
+        margin-bottom: 25px;
+        svg {
+            max-height: 54px;
+            max-width: 54px;
+        }
+        &_about {
+            margin-bottom: 0;
+            svg {
+                max-height: 69px;
+                max-width: 79px; 
+            }
+        }
+        &_how {
+            position: absolute;
+            left: 0;
+            top: -40px;
+            svg {
+                max-height: 108px;
+                max-width: 108px;
+            }
+            }
+    }
+    &__title {
+        .title-l;
+    }
+    &__description-text {
+        margin: 8px 0 0 0;
+        font-size: 14px;
+        line-height: 167.4%;
+        font-family: "Montserrat-Medium";
+
+    }
+    &__text {
+        margin-left: 20px;
+        &_how {
+            padding-left: 30px;
+        }
+    }
+}

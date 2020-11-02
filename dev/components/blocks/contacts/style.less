@@ -1,0 +1,60 @@
+.contacts {
+    background: @lightColor;
+    &__wrapper {
+        padding: 60px 50px;
+    }
+    &__title {
+        font-size: 30px;
+        margin: 0;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #000;
+        font-family: "Montserrat-Bold";
+    }
+    &__body {
+        margin-top: 28px;
+    }
+    &__block {
+        margin-bottom: 20px;
+    }
+
+    &__block-name {
+        display: block;
+        font-size: 12px;
+        line-height: 150%;
+        font-family: "Montserrat-Semibold";
+    }
+    &__link {
+        display: block;
+        font-size: 24px;
+        line-height: 120%;
+        color: @secondary;
+        transition: all 0.4s;
+        text-decoration: none;
+        margin-top: 5px;
+        &:hover {
+            color: @primary;
+        }
+        &_address,
+        &_schedule {
+            &:hover {
+                color: currentColor;
+            }
+        }
+        &_address {
+            font-size: 20px;
+        }
+        &_schedule {
+            text-transform: uppercase;
+        }
+        &_phone {
+            font-size: 26px;
+            line-height: 170%;
+            font-family: "Montserrat-Bold";
+            margin-top: 0;
+        }
+    }
+    &__footer {
+        margin-top: 25px;
+    }
+}

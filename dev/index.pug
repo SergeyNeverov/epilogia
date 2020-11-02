@@ -1,0 +1,48 @@
+include components/svg/index.pug
+include components/blocks/action/index.pug
+
+- 
+    top = {
+        type: 'top',
+        title: 'Тотальное ',
+        titleAccent: 'бикини+голени',
+        price: ' 3 690 руб.',
+        subtitle: 'Успейте записаться со скидкой'
+    }
+
+    bottom = {
+        type: 'bottom',
+        title: 'Мечтаете об идеально гладкой коже?',
+        subtitle: 'Успейте записаться со скидкой ',
+        subtitleAccent: 'скидкой 50%'
+    }
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="")
+        link(rel="stylesheet", href="/css/style.css")
+        title Эпилогия - студия лазерной эпиляции в Санкт-Петербурге
+        <script src=" https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=fddd1435-ad6a-45b6-90bd-e886baf1bd4b"></script>
+    body
+        include components/blocks/header/index.pug
+        .main
+            include components/sections/features_top/index.pug 
+            include components/sections/about/index.pug
+            include components/sections/sale/index.pug
+            .gradient
+                include components/sections/calculator/index.pug
+                include components/sections/how/index.pug
+                +action(top)
+            .gradient    
+                include components/sections/features/index.pug
+                +action(bottom)
+            include components/blocks/subscribe/index.pug    
+            include components/sections/map/index.pug
+        include components/blocks/footer/index.pug
+        include components/blocks/modals/index.pug
+        script(src="js/script.js")
+        script(src="js/libs.js")
+        script(src="js/script1.js")

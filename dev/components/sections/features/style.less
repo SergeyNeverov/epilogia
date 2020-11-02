@@ -1,0 +1,34 @@
+.features {
+    &_top {
+        position: relative;
+        z-index: 1;
+        margin-bottom: -78px;
+        .features__list {
+            padding: 40px 60px 42px;
+            justify-content: center;
+            box-shadow: 0px 54px 100px rgba(0, 0, 0, 0.08);
+            background: @lightColor;
+        }
+        .features__item {
+            width: calc(~"25% - 60px");
+            margin-bottom: 0;
+            margin-right: 59px;
+            &:last-child {
+                margin-right: 0;
+                width: 25%;
+            }
+        }
+        
+    }
+    &__list {
+        .flex;
+        .wrapp;
+        .list-reset;
+        .space-between;
+    }
+    &__item {
+        width: 25%;
+        max-width: 276px;
+        margin-bottom: 60px;
+    }
+}

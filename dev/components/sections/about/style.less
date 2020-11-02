@@ -1,0 +1,82 @@
+.about {
+    position: relative;
+    padding: 120px 0 68px;
+    margin-top: -78px;
+    .linear-background-dark;
+    &__wrapper {
+        .flex;
+        .space-between;
+        .wrapp;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 49px;
+        width: 40%;
+        height: 30%;
+        background-image: url(../img/decore-1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &__list {
+        width: 100%;
+        .flex;
+        .space-around;
+        .wrapp;
+        .list-reset;
+    }
+    &__item {
+        width: 33%;
+    }
+    &__half {
+        width: 50%;
+    }
+    &__blockquote {
+        margin: 0;
+        padding: 0;
+        .blockquote;
+    }
+    &__text {
+        margin-top: 18px;
+        padding-left: 90px;
+        position: relative;
+        &-wrapper {
+            margin-top: 40px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                left: -100px;
+                top: -15px;
+                width: 120px;
+                height: 80px;
+                background-image: url(../img/decore.svg);
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 24px;
+            width: 66px;
+            height: 3px;
+            background: @primary;
+        }
+
+    }
+    &__image {
+        position: relative;
+        img {
+            max-width: 100%;
+            margin-left: -100px;
+        }
+    }
+    &__video-button {
+        position: absolute;
+        left: 30%;
+        top: 30%;
+        z-index: 1;
+    }
+}

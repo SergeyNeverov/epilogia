@@ -1,0 +1,81 @@
+include ../../blocks/title/index.pug
+include ../../blocks/feature/index.pug
+
+-
+    var featurestList = {
+        items: [
+            {
+                src: 'face',
+                type: 'main',
+                title: 'Исключен риск ожогов',
+                text: `
+                    Воздействие на волосяные луковицы по всей глубине без повреждения кожи
+                `
+            },
+            {
+                src: 'feature-color',
+                type: 'main',
+                title: 'Безопасно',
+                text: `
+                    Процедура полностью безболезнена
+                `
+            },
+            {
+                src: 'legs',
+                type: 'main',
+                title: 'Эффективно',
+                text: `
+                    Одинаково эффективен для всех фототипов кожи!
+                `
+            },
+            {
+                src: 'hair-cup',
+                type: 'main',
+                title: 'На долго',
+                text: `
+                    Предотвращает повторный рост волос - убирает причину появления новых волос
+                `
+            },
+            {
+                src: 'safety',
+                type: 'main',
+                title: 'Исключен риск ожогов',
+                text: `
+                    Через час после процедуры вы готовы к любому мероприятию
+                `
+            },
+            {
+                src: 'hairs',
+                type: 'main',
+                title: 'Комфортно',
+                text: `
+                    Не требует отращивания волос перед процедурой
+                `
+            },
+            {
+                src: 'safety',
+                type: 'main',
+                title: 'Исключен риск ожогов',
+                text: `
+                    Через час после процедуры вы готовы к любому мероприятию
+                `
+            },
+            {
+                src: 'chrono',
+                type: 'main',
+                title: 'Быстро',
+                text: `
+                    С уважением к вашему времени - процедура проводится без незапланированного ожидания
+                `
+            },
+        ]
+    }
+
+section.section.features
+    .container
+        h1.title заголовок
+        ul.features__list
+            each feature in featurestList.items
+                li.features__item
+                    +feature(feature)
+       

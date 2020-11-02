@@ -1,0 +1,16 @@
+mixin calculator-select(data)
+    .calculator-select(data-price=data.price )
+        .calculator-select__image
+            .calculator-select__image-block(style=`background-image:url(/img/calc/${data.image})`)
+        .calculator-select__time
+            +svg('timer')
+            span=data.time
+        .calculator-select__text
+            p.calculator-select__name=data.name
+            if data.oldPrice !== null
+                .calculator-select__prices
+                    span.calculator-select__old-price=data.oldPrice
+                    strong.calculator-select__price=data.priceFormat
+            else
+                .calculator-select__prices
+                    strong.calculator-select__price=data.priceFormat           

@@ -1,0 +1,17 @@
+include ../../blocks/form/index.pug
+
+-
+       var form = {
+        text: `МЫ ГАРАНТИРУЕМ — БРИТЬ БУДЕТ НЕЧЕГО! ИНАЧЕ ДАРИМ ГОД БЕСПЛАТНЫХ ПРОЦЕДУР!`,
+        button: 'записаться со скидой 50%'
+    }
+.sale
+    .container
+        .sale__wrapper
+            .sale__half.sale__half_image
+                .sale__title
+                    span.sale__notice ТОЛЬКО ДО 20 НОЯБРЯ
+                    h2.title.title_section #[strong Скидка] на лазерную  #[br] эпиляцию любых #[br] зон
+            .sale__half.sale__half_form
+                .sale__form
+                    +form(form)

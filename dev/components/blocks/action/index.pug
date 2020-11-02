@@ -1,0 +1,47 @@
+mixin action(data)
+    .action
+        .container
+            form.action__form
+                if data.type === 'top'
+                    h3.action__title=data.title 
+                        strong=data.titleAccent
+                    p.action__notice 
+                        span за 
+                        strong=data.price
+                    p.action__subtitle=data.subtitle
+                else
+                    h3.action__title=data.title
+                    p.action__subtitle=data.subtitle
+                        strong=data.subtitleAccent    
+                .action__form-wrapper
+                    label.field.field_action.action__field
+                        input(type="text" name="name" class="field__input" placeholder="Имя" data-req="true" data-field="")
+                    label.field.field_action.action__field
+                        input(type="text" name="phone" class="field__input" placeholder="Телефон" data-req="true" data-field="" data-masked="phone")
+                    label.field.field_send.action__field-send
+                        a(href="javascript:void(0);" class="button button_light")
+                            span записаться со скидкой
+                            +svg('chevron-btn')
+                    label.field.check.action__check
+                        input(type="checkbox" name="agree" class="field__input check__input" data-req="true" data-field="")
+                        span.check__decore
+                            +svg('check')
+                        span.check__notice Нажимая на кнопку "записаться", я даю согласие на обработку персональных данных
+                .action__timer
+                    .timer
+                        p.timer__title акция ЗАКОНЧИТЬСЯ ЧЕРЕЗ
+                        ul.timer__list
+                            li.timer__item
+                                span.timer__count 6
+                                span.timer__count-name дней
+                            li.timer__item
+                                span.timer__count 3
+                                span.timer__count-name часов
+                            li.timer__item
+                                span.timer__count 13
+                                span.timer__count-name минут
+                            li.timer__item
+                                span.timer__count 34
+                                span.timer__count-name секунд    
+
+

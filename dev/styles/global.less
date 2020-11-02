@@ -1,0 +1,112 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat-Regular";
+    color: @secondary;
+    font-size: 16px;
+    line-height: 164.5%;
+    letter-spacing: 0.05em;
+    scroll-behavior: smooth;
+}
+
+*:not(ymaps) {
+    box-sizing: border-box !important;
+}
+
+.container  {
+    margin: 0 auto;
+    width: @container;
+}
+
+.video-button {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    svg {
+        height: 112px;
+        width: 112px;
+    }
+}
+
+.spinner {
+&__decorate {
+    fill: @primary;
+}
+  &__decorate,
+  &__circle {
+      transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.32s;
+      
+  }
+    &:hover {
+        .spinner__decorate {
+            fill: @lightColor;
+        }
+        .spinner__circle {
+            fill: @primary;
+        }
+    }
+}
+
+.button {
+    .flex;
+    background: @primary;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    color: @lightColor;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    padding: 24px 0;
+    font-family: "Montserrat-Bold";
+    svg {
+        fill: @lightColor;
+        width: 9px;
+        height: 15px;
+        margin-left: 20px;
+    }
+    &:hover {
+        background: darken(@primary, 20%);
+    }
+    &_footer {
+        padding: 18px 0;
+    }
+    &_light {
+        background: @lightColor;
+        border: 2px solid @primary;
+        color: @primary;
+        svg {
+            fill: @primary;
+        }
+        &:hover {
+            color: @lightColor;
+            background: @primary;
+            svg {
+                fill: @lightColor;
+            }
+        }
+    }
+}
+
+.logo {
+    svg {
+        max-height: 53px;
+        max-width: 275px;
+    }
+}
+
+.title {
+    &_main {
+        .title-main;
+        margin: 0;
+    }
+    &_section {
+        .section-title_highlight;
+    }
+}
+
+.gradient {
+    .linear-background;
+}

@@ -1,0 +1,38 @@
+.calculator {
+    padding-top: 100px;
+    &__title {
+        text-align: center;
+    }
+    &__notice {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: "Montserrat-Semibold";
+        color: @primary;
+    }
+    &__list {
+        .flex;
+        .wrapp;
+        .list-reset;
+        margin-top: 43px;
+    }
+    &__item {
+        width: calc(~"25% - 15px");
+        margin-right: 13px;
+        margin-bottom: 20px;
+        height: 350px;
+        &:nth-child(4n+4) {
+            margin-right: 0;
+        }
+    }
+    &__bottom {
+        max-width: 45%;
+        margin: 37px auto 0;
+    }
+    &__text-block {
+        .flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

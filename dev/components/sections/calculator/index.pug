@@ -1,0 +1,124 @@
+include ../../blocks/calculator-select/index.pug
+
+-
+    var calcList = [
+        {
+            name: 'Бёдра',
+            price: 2999,
+            image: 'calc0.jpg',
+            oldPrice: null,
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Голени',
+            price: 2999,
+            image: 'calc1.jpg',
+            oldPrice: null,
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Ноги полностью',
+            price: 2999,
+            image: 'calc2.jpg',
+            oldPrice: '3 999 р.',
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Грудь полностью',
+            price: 2999,
+            image: 'calc3.jpg',
+            oldPrice: null,
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Подмышки',
+            price: 2999,
+            image: 'calc4.jpg',
+            oldPrice: null,
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Руки полностью + кисти',
+            price: 2999,
+            image: 'calc5.jpg',
+            oldPrice: '3 990 р.',
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Линия бикини',
+            price: 2999,
+            image: 'calc6.jpg',
+            oldPrice: '3 990 р.',
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Тотальное бикини',
+            price: 2999,
+            image: 'calc7.jpg',
+            oldPrice: '3 990 р.',
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Ареолы',
+            price: 2999,
+            image: 'calc8.jpg',
+            oldPrice: null,
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Верхняя губа',
+            price: 2999,
+            image: 'calc9.jpg',
+            oldPrice: '3 990 р.',
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Шейная область',
+            price: 2999,
+            image: 'calc10.jpg',
+            oldPrice: '3 990 р.',
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+        {
+            name: 'Лицо полностью',
+            price: 2999,
+            image: 'calc11.jpg',
+            oldPrice: '3 990 р. ',
+            priceFormat: '2 999 р.',
+            time: '30 мин.'
+        },
+    ]
+
+section.sectiion.calculator
+    .container
+        .calculator__title
+            p.calculator__notice СТОИМОСТЬ ЛАЗЕРНОЙ ЭПИЛЯЦИИ
+            h2.title.title_section.title_centered Выберите нужные вам зоны
+        ul.calculator__list
+            each item in calcList
+                li.calculator__item
+                    +calculator-select(item)
+        .calculator__bottom
+            .calculator__text-block
+                p.calculator__text-key ЗОН ВЫБРАНО:
+                p.calculator__text-value 3
+            .calculator__text-block
+                p.calculator__text-key ИТОГОВАЯ СТОИМОСТЬ:
+                p.calculator__text-value
+                    span.calculator__text-old-price 3 990 р.
+                    strong.calculator__text-new-price 3 690 руб.
+            a(href="javascript:void(0);" data-open="calculator").button.button_light 
+                span записаться со скидой 50%
+                +svg('chevron-btn ')            
+

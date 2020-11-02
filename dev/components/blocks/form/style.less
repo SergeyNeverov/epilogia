@@ -1,0 +1,93 @@
+.form {
+    background: @lightColor;
+    padding: 76px 79px 66px 70px;
+    &__title {
+        font-family: "Montserrat-Bold";
+        font-size: 30px;
+        line-height: 130.2%;
+        color: @secondary;
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    &__description {
+        font-family: "Montserrat-Regular";
+        font-size: 14px;
+        text-align: center;
+        margin: 13px auto 0 auto;
+        color: @secondary;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        max-width: 90%;
+    }
+    &__body {
+        margin-top: 30px;
+    }
+}
+
+.field {
+    display: block;
+    margin-bottom: 17px;
+    &__input {
+        font-family: "Montserrat-Regular";
+        font-size: 14px;
+        color: @secondary;
+        line-height: 159.7%;
+        letter-spacing: 0.05em;
+        width: 100%;
+        padding: 21px 23px;
+        border: 1px solid #EDEDED;
+        transition: all 0.41s;
+        cursor: pointer;
+        &::placeholder {
+            color: @secondary;
+        }
+        &:focus {
+            outline: none;
+            border-color: @primary;
+        }
+    }
+   
+}
+
+.check {
+    .flex;
+    .space-between;
+    cursor: pointer;
+    &__input {
+        display: none;
+    }
+    &__decore {
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 5px;
+        height: 26px;
+        width: 26px;
+        .flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 11px;
+        svg {
+            width: 20px;
+            height: 22px;
+            fill: @primary;
+            transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.475);
+            opacity: 0;
+            transform: scale(0);
+        }
+    }
+    &__notice {
+        max-width: calc(~"100% - 40px");
+        font-size: 13px;
+        line-height: 21px;
+        font-family: "Montserrat-Light";
+        color: #141414;
+        transition: all 0.4s;
+    }
+}
+
+.check__input:checked ~ .check__decore svg{
+    transform: scale(1);
+    opacity: 1;        
+}
+

@@ -1,0 +1,45 @@
+.social {
+    &__list {
+        .flex;
+        .list-reset;
+    }
+    &__item {
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        .flex;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        transition: all cubic-bezier(0.175, 0.885, 0.12, 1.575) 0.4s;
+        border: 2px solid @primary;
+        &:hover {
+            border-color: @lightColor;
+            svg {
+                fill: @lightColor;
+            }
+        }
+    }
+    &__image {
+        width: 100%;
+        .flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        svg {
+            max-width: 30px;
+            max-height: 30px;
+            height: 100%;
+            width: 100%;
+            fill: @primary;
+            transition: all cubic-bezier(0.175, 0.885, 0.12, 1.575) 0.4s;
+
+        }
+    }
+}   

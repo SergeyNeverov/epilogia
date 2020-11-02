@@ -1,0 +1,43 @@
+include ../../blocks/feature/index.pug
+include ../../blocks/form/index.pug
+
+-
+    var howList = {
+        items: [
+            {
+               src: '01',
+                type: 'how',
+                title: 'Подготовка аппарата',
+                text: `
+                До начала процедуры врач обрабатывает насадку обеззараживающим раствором и подготавливает комплект одноразовых материалов.                `  
+            },
+            {
+               src: '02',
+                type: 'how',
+                title: 'Консультация клиента',
+                text: `
+                Специалист студии “Эпилогия” выявляет наличие противопоказаний, рассчитывает количиство необходимых процедур. `  
+            },
+            {
+               src: '03',
+                type: 'how',
+                title: 'Консультация клиента',
+                text: 
+                `Выдает памятку для соблюдения пост-режима пациентом.`           
+            },
+        ]
+    }
+    var form = {
+        text: `И ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ДЕРМАТОЛОГА - КОСМЕТОЛОГА`,
+        button: 'записаться на процедуру'
+    }
+
+section.section.how
+    .container
+        .how__wrapper
+            ul.how__list
+                each howItem in howList.items
+                    li.how__item
+                        +feature(howItem)
+            .how__form            
+                +form(form)

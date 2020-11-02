@@ -1,0 +1,8 @@
+mixin social(list)
+    .social
+        ul.social__list
+            each item in list
+                li.social__item
+                    a(href=item.link target="_blank").social__link
+                        .social__image
+                            +svg(item.svg)

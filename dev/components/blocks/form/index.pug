@@ -1,0 +1,20 @@
+mixin form(data)
+    form(action="/").form
+       .form__wrapper
+            .form__header
+                h3.form__title Оставьте #[br] заявку сейчас
+                p.form__description=data.text
+            .form__body
+                label.field
+                    input(type="text" name="name" class="field__input" placeholder="Имя" data-req="true" data-field="")
+                label.field
+                    input(type="text" name="phone" class="field__input" placeholder="Телефон" data-req="true" data-field="" data-masked="phone")
+                label.field.field_send
+                    a(href="javascript:void(0);" class="button button_light")
+                        span=data.button
+                        +svg('chevron-btn') 
+                label.field.check
+                    input(type="checkbox" name="agree" class="field__input check__input" data-req="true" data-field="")
+                    span.check__decore
+                        +svg('check')
+                    span.check__notice Нажимая на кнопку "записаться", я даю согласие на обработку персональных данных    
