@@ -1,0 +1,34 @@
+include ../../blocks/review/index.pug
+
+-
+    var review = {
+        img: 'img/review.jpg',
+        author: 'img/author.jpg',
+        name: 'Ольга Витальевна',
+        date: '22.05.2020',
+        text1: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+        text2: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
+
+    }
+
+section.section.reviews
+    .container
+        .reviews__title
+            h2.title.title_section Отзывы
+            p Отзывы наших клиентов
+        .slider.slider_reviews
+            .slider__controlls
+                .slider__arrow.arrow-prev
+                    +svg('arrow-left')
+                .slider__arrow.arrow-next
+                    +svg('arrow-right')  
+            ul.slider__list(data-count="1")
+                - for (var i = 0; i < 2; i++)
+                    li.slider__item
+                        +review(review)
+            .reviews__button
+                a(href="javascript:void(0);" data-open="call").button.modal-trigger
+                    span Оставить отзывы
+                    +svg('chevron-btn')            
+
+

@@ -1,0 +1,60 @@
+.review {
+    .flex;
+    .space-between;
+    padding: 43px 30px;
+    background: @lightColor;
+    &__image {
+        .flex;
+        justify-content: center;
+        align-items: center;
+        height: 380px;
+        width: calc(~"50% - 34px");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        svg {
+            height: 100px;
+            width: 100px;
+            z-index: 1;
+        }
+    }
+    &__text {
+        width: 50%;
+        padding-left: 31px;
+        border-left: 1px solid #EEEEEE;
+    }
+    &__author {
+        .flex;
+        img {
+            width: 64px;
+            height: 64px;
+        }
+        &-block {
+           margin-left: 15px;
+        }
+        &-name {
+            font-family: "Montserrat-Semibold";
+            color: #222;
+            font-size: 24px;
+            line-height: 160%;
+            margin: 0 0 4px 0;
+        }
+        &-date {
+            font-size: 12px;
+            line-height: 130%;
+            font-family: "Montserrat-Semibold";
+            margin: 0;
+        }
+    }
+    &__desc {
+        padding-top: 22px;
+        font-size: 16px;
+        line-height: 160%;
+        font-family: "Montserrat-Light";
+        color: #000;
+        p {
+            margin: 0 0 15px 0;
+        }
+    }
+}

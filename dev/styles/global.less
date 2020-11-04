@@ -16,6 +16,7 @@ html, body {
 .container  {
     margin: 0 auto;
     width: @container;
+    max-width: 1400px;
 }
 
 .video-button {
@@ -59,7 +60,7 @@ html, body {
     text-decoration: none;
     text-align: center;
     justify-content: center;
-    padding: 24px 0;
+    padding: 25px 0;
     font-family: "Montserrat-Bold";
     svg {
         fill: @lightColor;
@@ -74,8 +75,8 @@ html, body {
         padding: 18px 0;
     }
     &_light {
-        background: @lightColor;
-        border: 2px solid @primary;
+        background: transparent;
+        box-shadow: inset 0 0 0 2px @primary;
         color: @primary;
         svg {
             fill: @primary;
@@ -88,9 +89,13 @@ html, body {
             }
         }
     }
+    &_more {
+        padding: 19px 0;
+    }
 }
 
 .logo {
+    z-index: 1;
     svg {
         max-height: 53px;
         max-width: 275px;
@@ -105,8 +110,89 @@ html, body {
     &_section {
         .section-title_highlight;
     }
+    &_intro {
+        strong {
+            font-size: 55px;
+            color: @primary
+        } 
+    }
 }
 
 .gradient {
     .linear-background;
+    &_first {
+        padding-bottom: 550px;
+    }
 }
+
+.gradient-dark {
+    .linear-background-dark;
+}
+
+.slick-slide {
+    outline: none !important;
+}
+.slider{
+    position: relative;
+    &__controlls {
+        .flex;
+        .space-between;
+        align-items: center;
+        position: absolute;
+        top: -80px;
+        right: 0;
+        width: 140px;
+        &_compare {
+            position: static;
+        }
+    }
+    &__arrow {
+        cursor: pointer;
+        .flex;
+        svg {
+            fill: @primary;
+            transition: all .4s;
+            width: 60px;
+            height: 12px;
+        }
+        &:hover {
+            svg {
+                fill: @secondary;
+            }
+           
+        }
+    }
+    &__compare-arrow{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 56px;
+        height: 56px;
+        .flex;
+        align-items: center;
+        justify-content: center;
+        background: @lightColor;
+        z-index: 1;
+        cursor: pointer;
+        transition: all .4s;
+        svg {
+            width: 12px;
+            height: 18px;
+            fill: @primary;
+            transition: all .4s;
+        }
+        &.arrow-next {
+            right: 0;
+            left: auto;
+            transform: translate(50%, -50%);
+        }
+        &:hover {
+            background: @primary;
+            svg {
+                fill: @lightColor;
+            }
+        }
+    }
+}
+

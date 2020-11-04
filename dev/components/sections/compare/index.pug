@@ -1,0 +1,26 @@
+section.compare.section
+    .container
+        .compare__title
+            h2.title.title_section #[strong Эффект] от лазерной #[br]эпиляции виден уже #[br] после первой процедуры
+            p.compare__title-notice ДЛЯ ПОЛНОГО УДАЛЕНИЯ ВОЛОС В СРЕДНЕМ ТРЕБУЕТСЯ 5 ПРОЦЕДУР
+        .compare__sliders
+            .slider.slider_compare
+                .slider__controlls.slider__controlls_compare
+                    .slider__compare-arrow.arrow-prev
+                        +svg('chevron-left')
+                    .slider__compare-arrow.arrow-next
+                        +svg('chevron-right')
+                ul.slider__list(data-count="1")
+                        - for(var i = 1; i < 4; i++)
+                            li.slider__item
+                                .compare-slide(style=`background-image:url(img/ba${i}.jpg);`)
+            .slider.slider_compare
+                .slider__controlls.slider__controlls_compare
+                    .slider__compare-arrow.arrow-prev
+                        +svg('chevron-left')
+                    .slider__compare-arrow.arrow-next
+                        +svg('chevron-right')
+                ul.slider__list(data-count="1")
+                    - for(var i = 1; i < 4; i++)
+                        li.slider__item
+                            .compare-slide(style=`background-image:url(img/ba${i}.jpg);`)                            

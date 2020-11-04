@@ -1,0 +1,21 @@
+section.banner.section
+    .container
+        .banner__text
+            h2.title.title_section #[strong Эпиляция] двухволновым немецким лазером, #[br]со скидкой 50%
+            p.banner__description Гарантированный эффект после первой процедуры
+            a(href="javascript:void(0);" data-open="call").button.button_light.modal-trigger
+                span  записаться со скидой 50%
+                +svg('chevron-btn')
+        .banner__spinner
+            span смотреть видео
+            .spinner.modal-trigger(data-open="video")
+                <svg xmlns="http://www.w3.org/2000/svg" id="img-button" viewBox="0 0 162 162" fill="none">
+                    <circle class="spinner__circle" cx="81.1398" cy="81.2595" r="36.5697" fill="white">
+                    </circle>  
+                    <g>  
+                    <path d="M37.5826 116.788C44.9 125.759 54.8091 132.251 65.9556 135.379C77.1021 138.506 88.9424 138.115 99.8585 134.26C110.775 130.404 120.234 123.272 126.944 113.838C133.654 104.404 137.287 93.1286 137.348 81.5519C137.408 69.9751 133.892 58.6621 127.28 49.1588C120.669 39.6555 111.284 32.4255 100.409 28.4567C89.5334 24.4879 77.6978 23.974 66.5194 26.9852C55.3409 29.9964 45.3649 36.3858 37.9545 45.2802" stroke="#DCBF8E" stroke-width="2"/>
+                        <animateTransform attributeType="xml" attributeName="transform" type="rotate" dur="4.5s"  from="0 81 81" to="360 81 81"  repeatCount="indefinite" />
+                    </g>    
+                    <path class="spinner__decorate" d="M71.6588 69.6863C71.6588 68.2235 72.734 67.0378 74.0609 67.0378C74.4729 67.0378 74.7341 67.1565 75.1936 67.358L92.0432 78.1664C92.8268 78.6784 93.1897 79.5011 93.3298 80.4494V80.7154C93.1897 81.6633 92.8268 82.4862 92.0432 82.9985L75.1938 93.8066C74.7341 94.0084 74.4729 94.1265 74.0611 94.1265C72.7343 94.1265 71.6591 92.9408 71.6591 91.478V69.6863H71.6588Z"/>
+                </svg>        
+    include ../features_top/index.pug     

@@ -1,0 +1,12 @@
+mixin accordeon(data)
+    .accordeon
+        a(href="javascript:void(0);").accordeon__title=data.title
+            +svg('chevron-down')
+        .accordeon__content
+            each text in data.text
+                p.accordeon__desc=text
+                if data.list 
+                    ul.accordeon__list
+                        each listItem in data.list
+                            li.accordeon__item
+                                p.accordeon__item-text=listItem

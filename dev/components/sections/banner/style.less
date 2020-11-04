@@ -1,0 +1,41 @@
+.banner {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: calc(~"100vh + 36px");
+    margin-top: -72px;
+    padding-top: 177px;
+    position: relative;
+    &__text {
+        max-width: 45%;
+    }
+    &__description {
+        color: #464334;
+        font-size: 18px;
+        line-height: 164.9%;
+        text-transform: uppercase;
+        margin: 33px 0;
+    }
+    .button {
+        width: 75%;
+    }
+    &__spinner {
+        .flex;
+        align-items: center;
+        position: absolute;
+        bottom: 40%;
+        right: 25%;
+        z-index: 1;
+        cursor: pointer;
+        span {
+            font-size: 16px;
+            line-height: 20px;
+            color: @secondary;
+            font-family: "Montserrat-Semibold";
+        }
+        svg {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}

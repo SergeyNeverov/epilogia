@@ -1,0 +1,27 @@
+include ../../blocks/feature/index.pug
+-
+    var safeList = [
+        {
+            src: 'feature',
+            type: 'safe',
+            text: `Уникальная пятиступенчатая стерилизация помещения и оборудования`
+        },
+        {
+            src: 'feature',
+            type: 'safe',
+            text: `Строго соблюдаем все эпидемиологические требования! Covid -19`
+        },
+        {
+            src: 'feature',
+            type: 'safe',
+            text: `Специализирванные косметологические кушетки сделают процедуру максимально комфортной`
+        }
+    ]
+section.section.safety
+    .container
+        .safety__title
+            h2.title.title_section У нас безопасно!
+        ul.safety__list
+            each item in safeList
+                li.safety__item
+                    +feature(item)

@@ -1,0 +1,58 @@
+.faq {
+    // position: relative;
+    background-image: url(../img/olga.png);
+    background-repeat: no-repeat;
+    background-position: 78% center;
+    background-size: 500px;
+    padding-top: 85px;
+    padding-bottom: 115px;
+    min-height: 840px;
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: 0px;
+    //     width: 350px;
+    //     height: 350px;
+    //     background-image: url(../img/decore-6.png);
+    //     background-size: cover;
+    // }
+    &__list {
+        .list-reset; 
+    }
+
+    &__title-notice {
+        font-size: 16px;
+        line-height: 158.9%;
+        font-family: "Montserrat-Semibold";
+        margin: 42px 0 34px;
+        color: @primary;
+        max-width: 660px;
+    }
+
+    &__item {
+        margin-bottom: 3px;
+    }
+    &__wrapper {
+        max-width: 62%;
+    }
+    &__bottom {
+        .flex;
+        align-items: center;
+        .space-between;
+        margin-top: 36px;
+        .button {
+            min-width: 327px;
+            background: @lightColor;
+            &:hover {
+                background: @primary;
+            }
+        }
+        strong {
+            font-family: "Montserrat-Bold";
+            font-size: 18px;
+            line-height: 158.9%;
+            color: @secondary;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.intro {
+    padding-top: 73px;
+    padding-bottom: 98px;
+    &__title {
+        text-align: center;
+    }
+    &__notice {
+        font-size: 16px;
+        line-height: 158.9%;
+        color: @primary;
+        font-family: "Montserrat-Semibold";
+    }
+    &__block {
+        text-align: center;
+        position: relative;
+        margin-top: 43px;
+        background-image: url(../img/intro.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 33vw;
+        min-height: 680px;
+        img {
+            width: 50%;
+        }
+    }
+    &__list {
+        .list-reset;
+    }
+    &__item {
+        position: absolute;
+        max-width: 32%;
+        &:nth-child(1){
+            left: 15vw;
+            top: 5%;
+            text-align: right;
+            max-width: 385px;
+        }
+        &:nth-child(2) {
+            left: 18vw;
+            top: 45%;
+            text-align: right;
+            max-width: 270px;
+        }
+        &:nth-child(3) {
+            left: 17vw;
+            top: 82%;
+            text-align: right;
+            max-width: 345px;
+        }
+        &:nth-child(4){
+            right: 18vw;
+            top: 5%;
+            text-align: left;
+            max-width: 345px;
+        }
+        &:nth-child(5) {
+            right: 17vw;
+            top: 45%;
+            text-align: left;
+            max-width: 288px;
+        }
+        &:nth-child(6) {
+            right: 20%;
+            top: 82%;
+            text-align: left;
+            max-width: 288px;
+        }
+        &-text {
+            margin: 8px 0 0 0;
+            font-size: 14px;
+            line-height: 163.9%;
+            color: @secondary;
+        }
+        &-title {
+            font-size: 20px;
+            line-height: 138.2%; 
+            font-family: "Montserrat-Bold";
+            margin: 0;   
+            color: @primary;
+        }
+    }
+}

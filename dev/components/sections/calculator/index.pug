@@ -1,102 +1,113 @@
 include ../../blocks/calculator-select/index.pug
-
 -
     var calcList = [
         {
             name: 'Бёдра',
-            price: 2999,
+            price: 1995,
             image: 'calc0.jpg',
-            oldPrice: null,
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '3 990 р.',
+            priceFormat: '1 995 р.',
+            time: '30 мин.',
+            pricews: '3990'
         },
         {
             name: 'Голени',
-            price: 2999,
+            price: 1745,
             image: 'calc1.jpg',
-            oldPrice: null,
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '3 490 р.',
+            priceFormat: '1 745 р.',
+            time: '30 мин.',
+            pricews: '3490'
         },
         {
             name: 'Ноги полностью',
-            price: 2999,
+            price: 3495,
             image: 'calc2.jpg',
-            oldPrice: '3 999 р.',
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '6 990 р.',
+            priceFormat: '3 495 р.',
+            time: '30 мин.',
+            pricews: '6990'
         },
         {
             name: 'Грудь полностью',
-            price: 2999,
+            price: 895,
             image: 'calc3.jpg',
-            oldPrice: null,
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '1 745 р.',
+            priceFormat: '895р.',
+            time: '30 мин.',
+            pricews: '1745'
         },
         {
             name: 'Подмышки',
-            price: 2999,
+            price: 595,
             image: 'calc4.jpg',
-            oldPrice: null,
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '595 р.',
+            priceFormat: '1 190 р.',
+            time: '30 мин.',
+            pricews: '1190'
         },
         {
             name: 'Руки полностью + кисти',
-            price: 2999,
+            price: 1795,
             image: 'calc5.jpg',
-            oldPrice: '3 990 р.',
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '3 590 р.',
+            priceFormat: '1 795 р.',
+            time: '30 мин.',
+            pricews: '3590'
         },
         {
             name: 'Линия бикини',
-            price: 2999,
+            price: 1393,
             image: 'calc6.jpg',
-            oldPrice: '3 990 р.',
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '1 990  р.',
+            priceFormat: '1 393 р.',
+            time: '30 мин.',
+            pricews: '1990'
         },
         {
             name: 'Тотальное бикини',
-            price: 2999,
+            price: 2513,
             image: 'calc7.jpg',
-            oldPrice: '3 990 р.',
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '3 590 р.',
+            priceFormat: '2 513 р.',
+            time: '30 мин.',
+            pricews: '3590'
         },
         {
             name: 'Ареолы',
-            price: 2999,
+            price: 495,
             image: 'calc8.jpg',
-            oldPrice: null,
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '990  р.',
+            priceFormat: '495 р.',
+            time: '30 мин.',
+            pricews: '990'
         },
         {
             name: 'Верхняя губа',
-            price: 2999,
+            price: 395,
             image: 'calc9.jpg',
-            oldPrice: '3 990 р.',
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '790 р.',
+            priceFormat: '395 р.',
+            time: '30 мин.',
+            pricews: '790 '
         },
         {
             name: 'Шейная область',
-            price: 2999,
+            price: 895,
             image: 'calc10.jpg',
-            oldPrice: '3 990 р.',
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '1 790  р.',
+            priceFormat: '895 р.',
+            time: '30 мин.',
+            pricews: '1790'
         },
         {
             name: 'Лицо полностью',
-            price: 2999,
+            price: 1295,
             image: 'calc11.jpg',
-            oldPrice: '3 990 р. ',
-            priceFormat: '2 999 р.',
-            time: '30 мин.'
+            oldPrice: '2 590 р. ',
+            priceFormat: '1 295 р.',
+            time: '30 мин.',
+            pricews: '2590'
         },
     ]
 
@@ -112,12 +123,12 @@ section.sectiion.calculator
         .calculator__bottom
             .calculator__text-block
                 p.calculator__text-key ЗОН ВЫБРАНО:
-                p.calculator__text-value 3
+                p.calculator__text-value.calculator__text-value_count(data-calculator-count="") 0
             .calculator__text-block
                 p.calculator__text-key ИТОГОВАЯ СТОИМОСТЬ:
                 p.calculator__text-value
-                    span.calculator__text-old-price 3 990 р.
-                    strong.calculator__text-new-price 3 690 руб.
+                    span.calculator__text-old-price(data-calculator-sale="") 
+                    strong.calculator__text-new-price(data-calculator-total="") 
             a(href="javascript:void(0);" data-open="calculator").button.button_light 
                 span записаться со скидой 50%
                 +svg('chevron-btn ')            

@@ -3,3 +3,4 @@
 @@include('vendor/jquery.fancybox.min.js');
 @@include('vendor/iziModal.min.js');
 @@include('vendor/jquery.mask.min.js');
+@@include('vendor/slick.min.js');

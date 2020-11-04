@@ -1,0 +1,61 @@
+-
+    var teams = [
+        {
+            img: 'img/doc2.jpg',
+            name: 'Ольга Фамилиевская',
+            experience: '9 лет опыта работы',
+            text: 'Врач-косметолог, дерматовенеролог'
+        },
+        {
+            img: 'img/doc1.jpg',
+            name: 'Марченко Юлия',
+            experience: '12 лет опыта работы',
+            text: 'Врач-косметолог, дерматовенеролог'
+        },
+         {
+            img: 'img/doc3.jpg',
+            name: 'Сизова Татьяна',
+            experience: '7 лет опыта работы',
+            text: 'Врач-косметолог, дерматовенеролог'
+        },
+        {
+            img: 'img/doc2.jpg',
+            name: 'Ольга Фамилиевская',
+            experience: '9 лет опыта работы',
+            text: 'Врач-косметолог, дерматовенеролог'
+        },
+           {
+            img: 'img/doc3.jpg',
+            name: 'Сизова Татьяна',
+            experience: '7 лет опыта работы',
+            text: 'Врач-косметолог, дерматовенеролог'
+        },
+    ]
+
+section.team.section
+    .container
+        .team__title
+            p с высшим медицинским образованием
+            h2.title.title_section Все специалисты #[br] клиники 
+        .slider.slider_team
+            .slider__controlls
+                .slider__arrow.arrow-prev
+                    +svg('arrow-left')
+                .slider__arrow.arrow-next
+                    +svg('arrow-right')
+            ul.slider__list(data-count="4")
+                each doc in teams 
+                    li.slider__item
+                        .hero
+                            .hero__image
+                                img(src=doc.img, alt=doc.name)
+                            .hero__text
+                                strong.hero__name=doc.name
+                                p.hero__experience=doc.experience
+                                p.hero__about=doc.text
+                                a(href="javascript:void(0);" data-open="doc").button.modal-trigger.button_light.button_more
+                                    span подробнее
+                                    +svg('chevron-right')
+
+
+

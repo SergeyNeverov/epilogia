@@ -1,0 +1,74 @@
+.accordeon {
+    position: relative;
+    background: @lightColor;
+    border-radius: 4px;
+    height: 60px;
+    overflow: hidden;
+    transition: height 0.8s;
+    &.open {
+        height: auto;
+        max-height: 300px;
+        min-height: 300px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 8px;
+            background: transparent
+        }
+        &::-webkit-scrollbar-thumb {
+            width: 8px;
+            background: @primary;
+            border-radius: 4px;
+        }
+        scrollbar-color: @lightColor @primary;
+        scrollbar-width: thin;
+    }
+    &__title {
+        .flex;
+        .space-between;
+        align-items: center;
+        padding: 21px 23px;
+        cursor: pointer;
+        color: @secondary;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 120%;
+        font-family: "Montserrat-Semibold";
+        transition: all 0.4s;
+        svg {
+            width: 15px;
+            height: 15px;
+            transition: all 0.4s;
+        }
+        &.open {
+            color: @primary;
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        &.open ~ .accordeon__content {
+            transform: translateY(0%);
+            transition: all 0.4s;
+        }
+    }
+    &__content {
+        padding: 0 23px 23px;
+        transform: translateY(20%);
+        transition: transform 0.4s;
+        transition-delay: 0.4s;
+    }
+    &__desc {
+        font-size: 14px;
+        margin: 0;
+        margin: 0 0 7px 0;
+        max-width: 90%;
+        color: @secondary;
+    }
+    &__item-text {
+        font-size: 14px;
+        color: @secondary;
+    }
+  
+    
+}
+
+// .accordeon__title.open ~ .accordeon

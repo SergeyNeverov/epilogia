@@ -7,14 +7,16 @@ include components/blocks/action/index.pug
         title: 'Тотальное ',
         titleAccent: 'бикини+голени',
         price: ' 3 690 руб.',
-        subtitle: 'Успейте записаться со скидкой'
+        subtitle: 'Успейте записаться со скидкой',
+        class: '_top'
     }
 
     bottom = {
         type: 'bottom',
         title: 'Мечтаете об идеально гладкой коже?',
         subtitle: 'Успейте записаться со скидкой ',
-        subtitleAccent: 'скидкой 50%'
+        subtitleAccent: 'скидкой 50%',
+        class: '_bottom'
     }
 
 <!DOCTYPE html>
@@ -29,16 +31,26 @@ html(lang="ru")
     body
         include components/blocks/header/index.pug
         .main
-            include components/sections/features_top/index.pug 
-            include components/sections/about/index.pug
-            include components/sections/sale/index.pug
             .gradient
+                include components/sections/about/index.pug
+                include components/sections/sale/index.pug
                 include components/sections/calculator/index.pug
                 include components/sections/how/index.pug
+            .gradient.gradient_first
+                include components/sections/intro/index.pug
                 +action(top)
-            .gradient    
+            .gradient
+                include components/sections/team/index.pug
+                include components/sections/sertificates/index.pug  
+                include components/sections/reviews/index.pug
+            .gradient
                 include components/sections/features/index.pug
-                +action(bottom)
+                include components/sections/compare/index.pug 
+                include components/sections/faq/index.pug 
+            +action(bottom)
+            include components/sections/safety/index.pug
+            include components/sections/studio/index.pug    
+            include components/sections/sertificates/index.pug     
             include components/blocks/subscribe/index.pug    
             include components/sections/map/index.pug
         include components/blocks/footer/index.pug

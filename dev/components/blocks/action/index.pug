@@ -1,5 +1,5 @@
 mixin action(data)
-    .action
+    div(class="action action"+data.class)
         .container
             form.action__form
                 if data.type === 'top'
@@ -32,16 +32,16 @@ mixin action(data)
                         p.timer__title акция ЗАКОНЧИТЬСЯ ЧЕРЕЗ
                         ul.timer__list
                             li.timer__item
-                                span.timer__count 6
+                                span.timer__count.timer__day 6
                                 span.timer__count-name дней
                             li.timer__item
-                                span.timer__count 3
+                                span.timer__count.timer__hours 3
                                 span.timer__count-name часов
                             li.timer__item
-                                span.timer__count 13
+                                span.timer__count.timer__minutes 13
                                 span.timer__count-name минут
                             li.timer__item
-                                span.timer__count 34
+                                span.timer__count.timer__seconds 34
                                 span.timer__count-name секунд    
 
 

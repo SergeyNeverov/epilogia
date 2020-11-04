@@ -1,3 +1,11 @@
+@media(max-width: 1800px) {
+    .intro {
+       &__block {
+        background-size: 450px;
+       }
+    }
+}
+
 @media(max-width: 1600px) {
     .container {
         width: 80%;
@@ -10,10 +18,31 @@
             min-height: 800px;
         }
     }
+    .intro {
+        &__block {
+         background-size: 350px;
+        }
+     }
+     .map {
+         &__contacts {
+             left: 10%;
+         }
+     }
 }
 
 @media(max-width: 1440px) {
     .container {
         width: 90%;
     }
+    .intro {
+        &__block {
+         background-size: 300px;
+        }
+    }
+    .map {
+        &__contacts {
+            left: 5%;
+        }
+    }
+     
 }

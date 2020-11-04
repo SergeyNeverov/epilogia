@@ -26,6 +26,13 @@ mixin feature(data)
                         strong.feature__title-text=data.title
                     .feature__description
                         p.feature__description-text=data.text
+        when 'safe'
+            .feature.feature_safe
+                .feature__image.feature__image_safe
+                    +svg(data.src)
+                p.feature__description-text=data.text    
+
+                        
 
 
 

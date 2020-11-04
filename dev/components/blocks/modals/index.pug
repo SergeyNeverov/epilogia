@@ -10,8 +10,17 @@ include ../form/index.pug
         .modal__close(data-izimodal-close="")
             +svg('close')
         +form(form)
-.modal(data-modal="video")
+.modal.modal_video(data-modal="video")
+    .modal__close(data-izimodal-close="")
+        +svg('close')
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/mlLFgbt58Ig" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+.modal(data-modal="doc")
     .modal__wrapper
         .modal__close(data-izimodal-close="")
             +svg('close')
-        h1 Video                 
+        .modal__info
+            .modal__image
+                img(src="img/doc2.jpg")
+            .modal__text
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum perspiciatis eligendi consectetur alias eveniet ipsa similique ipsam esse beatae voluptates nostrum, architecto necessitatibus quasi sit rerum corrupti doloribus mollitia eum!     
+

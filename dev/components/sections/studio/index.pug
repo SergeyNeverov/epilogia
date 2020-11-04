@@ -1,0 +1,8 @@
+section.studio.section
+    .studio__title 
+        h2.title.title_section Тур по нашей студии
+    ul.studio__list
+        - for(var i = 1; i < 10; i++)
+            li.studio__item
+                a(href=`img/studio/studio${i}.jpg` data-fancybox=`studio-${i}` )
+                    img(src=`img/studio/studio${i}.jpg`, alt="Наша студия" )
